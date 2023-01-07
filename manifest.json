@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Cambiador de palabras",
+  "description": "Esta extensión cambia la palabra 'argentinos' por 
+'campeones del mundo' en todas las páginas que visitas.",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
